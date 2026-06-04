@@ -1,0 +1,32 @@
+[
+  {
+    "invoice_id": "INV-1007",
+    "note": "clean: matches PO, vendor active, under threshold",
+    "expected_verdict": "APPROVE",
+    "must_cite": []
+  },
+  {
+    "invoice_id": "INV-1078",
+    "note": "clean small invoice",
+    "expected_verdict": "APPROVE",
+    "must_cite": []
+  },
+  {
+    "invoice_id": "INV-1042",
+    "note": "exceeds PO + vendor under_review + over threshold",
+    "expected_verdict": "HOLD",
+    "must_cite": ["fraud-controls.md"]
+  },
+  {
+    "invoice_id": "INV-1051",
+    "note": "at the $10k approval threshold",
+    "expected_verdict": "HOLD",
+    "must_cite": ["approval-thresholds.md"]
+  },
+  {
+    "invoice_id": "INV-1063",
+    "note": "already settled by an existing payment",
+    "expected_verdict": "HOLD",
+    "must_cite": ["fraud-controls.md"]
+  }
+]
